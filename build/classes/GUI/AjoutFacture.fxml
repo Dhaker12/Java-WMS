@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AjoutFactureController">
+   <children>
+       <Label layoutX="102.0" layoutY="135.0" text="fournisseur :" />
+       <Label layoutX="111.0" layoutY="170.0" text="prix :" />
+       <Label layoutX="102.0" layoutY="211.0" text="quantite :" />
+        <Label layoutX="89.0" layoutY="275.0" text="type_product :" />     
+        <Label layoutX="111.0" layoutY="320" text="Adresse :" />
+         <Label layoutX="109.0" layoutY="355.0" text="Date :" />
+
+              <ImageView fx:id="prenomCheckMark" fitHeight="20.0" fitWidth="20.0" layoutX="359.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="359.0" AnchorPane.topAnchor="382.0" />
+
+
+       <Label layoutX="104.0" layoutY="387.0" text="telephone :" />
+       <Label layoutX="105.0" layoutY="424.0" text="Employee :" />
+                         <TextField fx:id="txtqu" layoutX="203.0" layoutY="207.0" onKeyReleased="#testquan" />
+                                  <TextField fx:id="txtpx" layoutX="203.0" layoutY="166.0" onKeyReleased="#testprix" />
+                               <TextField fx:id="txtPrenom" layoutX="203.0" layoutY="469.0" />
+                               <TextField fx:id="txtAd" layoutX="203.0" layoutY="316.0" onKeyReleased="#testAdresse" />
+
+                                  <TextField fx:id="txtte" layoutX="203.0" layoutY="383.0" onKeyReleased="#testTel" />
+
+                                  <TextField fx:id="pro" layoutX="203.0" layoutY="274.0" onKeyReleased="#testProduit" />
+
+      <DatePicker fx:id="date1" layoutX="203.0" layoutY="351.0" onAction="#testDate" prefHeight="25.0" prefWidth="149.0" />
+            <ComboBox fx:id="combo" layoutX="203.0" layoutY="132.0" prefHeight="25.0" prefWidth="149.0" />
+                        <ComboBox fx:id="combo1" layoutX="203.0" layoutY="417.0" prefHeight="25.0" prefWidth="149.0" />
+                        <ComboBox fx:id="combo2" layoutX="6.0" layoutY="719.0" prefHeight="31.0" prefWidth="169.0" />
+                        <ComboBox fx:id="combo3" layoutX="5.0" layoutY="684.0" prefHeight="31.0" prefWidth="169.0" />
+
+
+
+
+                                    
+<TableView fx:id="tablereclamation1" layoutX="400.0" layoutY="143.0" prefHeight="1000.0" prefWidth="11000.0">  
+               <columns>
+                <TableColumn fx:id="c1" prefWidth="100" text="id" />
+                <TableColumn fx:id="c2" prefWidth="100" text="mon" />
+                <TableColumn fx:id="c3" prefWidth="100" text="four" />
+                  <TableColumn fx:id="c4" prefWidth="100" text="prix" />
+                 <TableColumn fx:id="c5" prefWidth="100" text="qu" />
+                  <TableColumn fx:id="c6" prefWidth="100" text="prod" />
+                  <TableColumn fx:id="c7" prefWidth="100" text="Adr" />
+                  <TableColumn fx:id="c8" prefWidth="100" text="tel" />
+                 <TableColumn fx:id="c9" prefWidth="100" text="Fou" />
+
+                   <TableColumn fx:id="c10" prefWidth="100" text="Em" />
+                  
+
+              </columns>
+                    </TableView>
+
+
+
+<Button fx:id="idsup" ellipsisString="" layoutX="310.0" layoutY="559.0" mnemonicParsing="false" onAction="#supprimer" text="Supprimer" textAlignment="CENTER" textFill="#dd2d16">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+          
+         </effect></Button>
+      <Button fx:id="idrep" layoutX="39.0" layoutY="558.0" mnemonicParsing="false" onAction="#update" text="Update">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            
+         </effect></Button>
+      <Button fx:id="idreturn" layoutX="214.0" layoutY="559.0" mnemonicParsing="false" onAction="#pdf" prefHeight="30.0" prefWidth="81.0" text="pdf">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+
+      
+      <Button fx:id="btn_valider" layoutX="114.0" layoutY="559.0" mnemonicParsing="false" onAction="#valider" prefHeight="31.0" prefWidth="76.0" text="Valider" />
+      <TextField fx:id="txt_search" layoutX="127.0" layoutY="756.0" promptText="search" />
+      <Label layoutX="105.0" layoutY="473.0" text="Montant" />
+      <ImageView fx:id="dateCheckMark" fitHeight="20.0" fitWidth="20.0" layoutX="359.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="ADCheckMark" fitHeight="20.0" fitWidth="20.0" layoutX="359.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="typeheckMark1" fitHeight="20.0" fitWidth="20.0" layoutX="359.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="quCheckMark3" fitHeight="20.0" fitWidth="20.0" layoutX="359.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="prixheckMark" fitHeight="20.0" fitWidth="20.0" layoutX="359.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="montantCheckMark1" fitHeight="20.0" fitWidth="20.0" layoutX="369.0" layoutY="472.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+   
+   
+</AnchorPane>

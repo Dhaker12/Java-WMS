@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="564.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.TestController">
+   <children>
+      <Pane layoutY="-2.0" prefHeight="564.0" prefWidth="1050.0">
+         <children>
+            <JFXTextField fx:id="txt1" layoutX="250.0" layoutY="194.0" />
+            <JFXTextField fx:id="txt2" layoutX="249.0" layoutY="254.0" />
+            <JFXTextField fx:id="txt3" layoutX="249.0" layoutY="310.0" />
+            <Label layoutX="116.0" layoutY="199.0" text="Nom" />
+            <Label layoutX="115.0" layoutY="259.0" text="Description" />
+            <Label layoutX="116.0" layoutY="315.0" text="type stockage" />
+            <TableView fx:id="table" layoutX="515.0" layoutY="143.0" onMouseClicked="#go_table" prefHeight="360.0" prefWidth="490.0">
+              <columns>
+                <TableColumn fx:id="c1" prefWidth="121.0" text="Nom" />
+                <TableColumn fx:id="c2" prefWidth="168.0" text="Description" />
+                  <TableColumn fx:id="c3" prefWidth="136.0" text="Type-s" />
+                  <TableColumn fx:id="c4" prefWidth="64.0" text="ID" />
+              </columns>
+            </TableView>
+            <JFXButton layoutX="222.0" layoutY="407.0" onAction="#submit" prefHeight="45.0" prefWidth="92.0" style="-fx-background-color: #385F8C;" text="ADD" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="109.0" layoutY="407.0" onAction="#delete" prefHeight="45.0" prefWidth="92.0" style="-fx-background-color: #385F8C;" text="DELETE" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="335.0" layoutY="407.0" onAction="#update" prefHeight="45.0" prefWidth="92.0" style="-fx-background-color: #385F8C;" text="UPDATE" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
